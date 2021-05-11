@@ -10,7 +10,7 @@ import com.nth.imagespicker.MimeType
 /**
  * Describe : Filter for choosing a {@link Item}. You can add multiple Filters through
  * {@link SelectionCreator #addFilter(Filter)}.
- * Created by NTH on 2020/9/4 on 16:12.
+ * Created by NTH on 2020/5/5 on 16:12.
  */
 abstract class Filter {
     companion object {

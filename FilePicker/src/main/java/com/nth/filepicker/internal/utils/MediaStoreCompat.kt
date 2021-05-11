@@ -9,7 +9,6 @@ import android.os.Build
 import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import com.nth.filepicker.internal.entity.CaptureStrategy
-import com.nth.imagespicker.utils.Platform
 import java.lang.ref.WeakReference
 
 class MediaStoreCompat {

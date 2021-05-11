@@ -39,7 +39,7 @@ import com.nth.filepicker.internal.ui.widget.CheckView;
 import com.nth.filepicker.internal.ui.widget.IncapableDialog;
 import com.nth.filepicker.internal.utils.PhotoMetadataUtils;
 import com.nth.filepicker.listener.OnFragmentInteractionListener;
-import com.nth.imagespicker.utils.Platform;
+import com.nth.filepicker.internal.utils.Platform;
 
 public abstract class BasePreviewActivity extends AppCompatActivity implements View.OnClickListener,
         ViewPager.OnPageChangeListener, OnFragmentInteractionListener {

@@ -15,14 +15,12 @@ import android.provider.MediaStore
 import android.text.TextUtils
 import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
-import com.nth.imagespicker.utils.Platform
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
 /**
  * Describe : http://stackoverflow.com/a/27271131/4739220
- * Created by Leo on 2018/9/5 on 14:07.
  */
 
 fun getSimpleDateFormat(): String = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())

@@ -14,7 +14,7 @@ import com.nth.filepicker.MimeTypeManager
 import com.nth.filepicker.engine.impl.GlideEngine
 import com.nth.filepicker.internal.entity.CaptureStrategy
 import com.nth.filepicker.internal.entity.ConstValue
-import com.nth.imagespicker.utils.Platform
+import com.nth.filepicker.internal.utils.Platform
 import com.tbruyelle.rxpermissions2.RxPermissions
 
 class MainActivity : AppCompatActivity() {

@@ -22,9 +22,7 @@ import java.util.*
 import kotlin.math.log10
 import kotlin.math.pow
 
-/**
- * Created by Leo on 2018/8/29 on 15:24.
- */
+
 object PhotoMetadataUtils {
 
     private const val MAX_WIDTH = 1600

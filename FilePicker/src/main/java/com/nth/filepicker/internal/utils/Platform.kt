@@ -1,12 +1,10 @@
-package com.nth.imagespicker.utils
+package com.nth.filepicker.internal.utils
 
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 
-/**
- * Created by Leo on 2018/9/5 on 14:09.
- */
+
 object Platform {
 
     fun hasKitKat19() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT

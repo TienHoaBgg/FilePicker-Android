@@ -7,7 +7,7 @@ import android.widget.ImageView
 
 /**
  * Describe : Image loader interface. There are predefined
- * Created by NTH on 2020/9/6 on 17:01.
+ * Created by NTH on 2021/5/5 on 17:01.
  */
 interface ImageEngine {
 

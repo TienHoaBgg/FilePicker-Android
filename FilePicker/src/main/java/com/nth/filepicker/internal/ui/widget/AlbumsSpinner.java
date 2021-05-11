@@ -28,7 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.ListPopupWindow;
 import com.nth.filepicker.R;
 import com.nth.filepicker.internal.entity.Album;
-import com.nth.imagespicker.utils.Platform;
+import com.nth.filepicker.internal.utils.Platform;
 
 public class AlbumsSpinner {
 

@@ -9,7 +9,7 @@
     <string name="empty_text">Không có file để chọn</string>
     <string name="button_ok">OK</string>
     <string name="error_over_count_default">Bạn đã đạt đến mức tối đa có thể chọn</string>
-    <string name="error_over_count">Bạn chỉ có thể chọn tối đa% 1 $ d tệp tin</string>
+    <string name="error_over_count">Bạn chỉ có thể chọn tối đa %1$d tệp tin</string>
     <string name="error_under_quality">Chất lượng thấp</string>
     <string name="error_over_quality">Chất lượng cao</string>
     <string name="error_file_type">Loại tập tin không được hỗ trợ</string>
