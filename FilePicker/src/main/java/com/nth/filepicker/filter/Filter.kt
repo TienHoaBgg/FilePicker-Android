@@ -4,7 +4,7 @@ import android.content.Context
 import com.nth.filepicker.MimeTypeManager
 import com.nth.filepicker.internal.entity.IncapableCause
 import com.nth.filepicker.internal.entity.Item
-import com.nth.imagespicker.MimeType
+import com.nth.filepicker.MimeType
 
 
 /**

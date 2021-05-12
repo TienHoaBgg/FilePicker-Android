@@ -28,7 +28,6 @@ import com.nth.filepicker.internal.entity.SelectionSpec;
 import com.nth.filepicker.listener.OnCheckedListener;
 import com.nth.filepicker.listener.OnSelectedListener;
 import com.nth.filepicker.ui.MatisseActivity;
-import com.nth.imagespicker.MimeType;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

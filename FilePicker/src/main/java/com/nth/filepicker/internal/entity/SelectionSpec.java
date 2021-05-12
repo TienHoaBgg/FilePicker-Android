@@ -25,7 +25,7 @@ import com.nth.filepicker.engine.impl.GlideEngine;
 import com.nth.filepicker.filter.Filter;
 import com.nth.filepicker.listener.OnCheckedListener;
 import com.nth.filepicker.listener.OnSelectedListener;
-import com.nth.imagespicker.MimeType;
+import com.nth.filepicker.MimeType;
 
 
 import java.util.List;

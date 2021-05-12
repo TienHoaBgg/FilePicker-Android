@@ -1,6 +1,7 @@
 package com.nth.simple
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -9,6 +10,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.nth.filepicker.MimeType
 import com.nth.filepicker.NTHFilePicker
 import com.nth.filepicker.MimeTypeManager
 import com.nth.filepicker.engine.impl.GlideEngine
@@ -23,37 +25,46 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<AppCompatButton>(R.id.bottomClick).setOnClickListener {
-            RxPermissions(this@MainActivity)
-                .request(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
-                .subscribe {
-                    if (!it) {
-                        Toast.makeText(
-                            this@MainActivity, "Not Access", Toast.LENGTH_LONG
-                        ).show()
-                        return@subscribe
-                    }
-                    showFileChooser()
-                }
+        findViewById<AppCompatButton>(R.id.buttonVideo).setOnClickListener {
+            showFileChooser(MimeTypeManager.ofVideo())
+        }
+
+        findViewById<AppCompatButton>(R.id.buttonImage).setOnClickListener {
+            showFileChooser(MimeTypeManager.ofImage())
         }
 
     }
 
-    private fun showFileChooser() {
-        NTHFilePicker.from(this@MainActivity)
-            .choose(MimeTypeManager.ofAll())
-            .countable(false)
-            .capture(true)
-            .captureStrategy(
-                CaptureStrategy(
-                    true,
-                    "${Platform.getPackageName(this@MainActivity)}.fileprovider"
-                )
+    @SuppressLint("CheckResult")
+    private fun showFileChooser(mimeTypes: Set<MimeType>) {
+        RxPermissions(this@MainActivity)
+            .request(
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.CAMERA
             )
-            .thumbnailScale(0.85f)
-            .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-            .imageEngine(GlideEngine())
-            .forResult(ConstValue.REQUEST_CODE_CHOOSE)
+            .subscribe {
+                if (!it) {
+                    Toast.makeText(
+                        this@MainActivity, "Not Access", Toast.LENGTH_LONG
+                    ).show()
+                    return@subscribe
+                }
+                NTHFilePicker.from(this@MainActivity)
+                    .choose(MimeTypeManager.ofVideo())
+                    .countable(false)
+                    .capture(true)
+                    .captureStrategy(
+                        CaptureStrategy(
+                            true,
+                            "${Platform.getPackageName(this@MainActivity)}.fileprovider"
+                        )
+                    )
+                    .thumbnailScale(0.85f)
+                    .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+                    .imageEngine(GlideEngine())
+                    .forResult(ConstValue.REQUEST_CODE_CHOOSE)
+            }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -65,13 +76,11 @@ class MainActivity : AppCompatActivity() {
             val uriList = NTHFilePicker.obtainResult(data) ?: return
             uriList.forEach {
                 string += it.toString() + "\n"
-                Log.i("NTHDebug",string)
+                Log.i("NTHDebug", string)
             }
 
         }
     }
-
-
 
 
 }

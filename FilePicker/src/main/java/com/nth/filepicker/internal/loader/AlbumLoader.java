@@ -28,7 +28,6 @@ import androidx.loader.content.CursorLoader;
 import com.nth.filepicker.MimeTypeManager;
 import com.nth.filepicker.internal.entity.Album;
 import com.nth.filepicker.internal.entity.SelectionSpec;
-import com.nth.imagespicker.MimeType;
 
 
 import java.util.HashMap;

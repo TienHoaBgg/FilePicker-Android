@@ -6,7 +6,6 @@ import android.text.TextUtils
 import android.webkit.MimeTypeMap
 import androidx.collection.ArraySet
 import com.nth.filepicker.internal.utils.getRealFilePath
-import com.nth.imagespicker.MimeType
 import java.util.*
 
 /**

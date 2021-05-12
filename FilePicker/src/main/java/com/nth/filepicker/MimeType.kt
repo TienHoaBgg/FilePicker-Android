@@ -1,4 +1,4 @@
-package com.nth.imagespicker
+package com.nth.filepicker
 
 import com.nth.filepicker.MimeTypeManager
 

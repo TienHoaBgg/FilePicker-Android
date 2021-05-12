@@ -21,7 +21,6 @@ import android.net.Uri;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.nth.filepicker.ui.MatisseActivity;
-import com.nth.imagespicker.MimeType;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
